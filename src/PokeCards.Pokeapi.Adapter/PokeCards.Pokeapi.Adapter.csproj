@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Refit" Version="4.6.107" />
+    <PackageReference Include="Refit.HttpClientFactory" Version="4.6.107" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Location\" />
+    <Folder Include="Prism.Ioc\" />
+  </ItemGroup>
+
+</Project>
