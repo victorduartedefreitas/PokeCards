@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace PokeCards.Pokeapi.Adapter.Models.Pokemon
 {
-    public class Type
+    public class PkmnType
     {
         public int Id { get; set; }
         public string Name { get; set; }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace PokeCards.Pokeapi.Adapter.Models.Games
 {
-    public class Version
+    public class GameVersion
     {
         public int Id { get; set; }
         public string Name { get; set; }

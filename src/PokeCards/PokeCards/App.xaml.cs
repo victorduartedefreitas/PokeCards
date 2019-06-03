@@ -17,12 +17,13 @@ namespace PokeCards.Application
         protected override void OnInitialized()
         {
             InitializeComponent();
-            NavigationService.NavigateAsync("SearchHeroView");
+            NavigationService.NavigateAsync("MainPage");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            throw new NotImplementedException();
+            containerRegistry.RegisterForNavigation<MainPage>();
+            containerRegistry.AddPokeApiAdapters();
         }
 
         protected override void OnStart()

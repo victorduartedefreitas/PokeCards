@@ -19,8 +19,8 @@ namespace PokeCards.Pokeapi.Adapter.Models.Moves
         public int Healing { get; set; }
         [JsonProperty("crit_rate")]
         public int CriticalRate { get; set; }
-        [JsonProperty("aliment_chance")]
-        public int AlimentChance { get; set; }
+        [JsonProperty("ailment_chance")]
+        public int AilmentChance { get; set; }
         [JsonProperty("flinch_chance")]
         public int FlinchChance { get; set; }
         [JsonProperty("stat_chance")]

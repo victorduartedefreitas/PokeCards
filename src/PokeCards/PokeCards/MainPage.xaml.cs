@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PokeCards.Domain.Adapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -13,9 +14,10 @@ namespace PokeCards.Application
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        public MainPage()
+        public MainPage(IPokeApiAdapter pokeApiAdapter)
         {
             InitializeComponent();
+            pokeApiAdapter.GetBerry(1);
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace PokeCards.Pokeapi.Adapter.Models
 {
-    public class Resource
+    public class GenericResource
     {
         public int Count { get; set; }
         public string Next { get; set; }

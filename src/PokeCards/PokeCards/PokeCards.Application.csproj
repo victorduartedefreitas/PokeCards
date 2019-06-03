@@ -19,6 +19,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\PokeCards.Core\PokeCards.Core.csproj" />
+    <ProjectReference Include="..\..\PokeCards.Domain\PokeCards.Domain.csproj" />
+    <ProjectReference Include="..\..\PokeCards.Pokeapi.Adapter\PokeCards.Pokeapi.Adapter.csproj" />
   </ItemGroup>
 
   <ItemGroup>
