@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using PokeCards.Pokeapi.Adapter.Models.Common;
+using System.Collections.Generic;
 
 namespace PokeCards.Pokeapi.Adapter.Models
 {
