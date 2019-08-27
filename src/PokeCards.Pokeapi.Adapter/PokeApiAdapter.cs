@@ -1,4 +1,5 @@
 ﻿using PokeCards.Domain.Adapters;
+using PokeCards.Domain.Models;
 using System;
 using System.Threading.Tasks;
 
@@ -32,6 +33,23 @@ namespace PokeCards.Pokeapi.Adapter
             catch (Exception ex)
             {
 
+            }
+        }
+
+        public async Task<Pokemon> GetPokemon(int id)
+        {
+            try
+            {
+                var pkmn = await pokeApi.GetPokemonAsync(id);
+                return new Pokemon()
+                {
+                    Name = pkmn.Name.ToUpper(),
+                    Image = new Uri(pkmn.Sprites.FrontDefault)
+                };
+            }
+            catch (Exception ex)
+            {
+                return null;
             }
         }
 

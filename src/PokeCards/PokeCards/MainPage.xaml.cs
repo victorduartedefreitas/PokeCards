@@ -1,9 +1,7 @@
 ﻿using PokeCards.Domain.Adapters;
-using System;
+using PokeCards.Domain.Models;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -17,7 +15,26 @@ namespace PokeCards.Application
         public MainPage(IPokeApiAdapter pokeApiAdapter)
         {
             InitializeComponent();
-            pokeApiAdapter.GetBerry(1);
+
+            this.pokeApiAdapter = pokeApiAdapter;
+
+            LoadPokemonList();
         }
+
+        private async Task LoadPokemonList()
+        {
+            AllPokemon = new List<Pokemon>();
+            for (int i = 1; i <= 151; i++)
+            {
+                var pkmn = await pokeApiAdapter.GetPokemon(i);
+                AllPokemon.Add(pkmn);
+            }
+
+            OnPropertyChanged("AllPokemon");
+        }
+
+        IPokeApiAdapter pokeApiAdapter;
+
+        public IList<Pokemon> AllPokemon { get; private set; }
     }
 }

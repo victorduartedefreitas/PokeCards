@@ -25,7 +25,7 @@ namespace PokeCards.Pokeapi.Adapter.Models.Pokemon
         public string LocationAreaEncounters { get; set; }
         public IList<PokemonMove> Moves { get; set; }
         public PokemonSprites Sprites { get; set; }
-        public IList<NamedApiResource> Species { get; set; }
+        public NamedApiResource Species { get; set; }
         public IList<PokemonStat> Stats { get; set; }
         public IList<PokemonType> Types { get; set; }
     }

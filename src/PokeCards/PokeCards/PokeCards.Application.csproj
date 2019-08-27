@@ -34,7 +34,7 @@
 
   <ItemGroup>
     <Folder Include="Prism.Ioc\" />
-    <Folder Include="Views\" />
     <Folder Include="ViewModels\" />
+    <Folder Include="Views\" />
   </ItemGroup>
 </Project>
